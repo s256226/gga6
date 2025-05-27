@@ -33,7 +33,7 @@ void main(void)
   vec3 n = normalize((mg * cv).xyz);                // 法線ベクトル
 
   //【宿題】下の１行（の右辺）を置き換えてください
-  vc = cv
+  vc = pv;
 
   gl_Position = mc * pv;
 }
