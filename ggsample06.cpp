@@ -86,7 +86,7 @@ int GgApp::main(int argc, const char* const* argv)
   // 頂点の色 cv 用のバッファオブジェクト
   glBindBuffer(GL_ARRAY_BUFFER, vbo[1]);
   // 【宿題】cv の代わりに nv を使うように変更する
-  glBufferData(GL_ARRAY_BUFFER, sizeof cv, cv, GL_STATIC_DRAW);
+  glBufferData(GL_ARRAY_BUFFER, sizeof nv, nv, GL_STATIC_DRAW);
 
   // 結合されている頂点バッファオブジェクトを in 変数 cv (index == cvLoc) から参照できるようにする
   glVertexAttribPointer(cvLoc, 3, GL_FLOAT, GL_FALSE, 0, 0);
