@@ -33,16 +33,7 @@ void main(void)
   vec3 n = normalize((mg * cv).xyz);                // 法線ベクトル
 
   //【宿題】下の１行（の右辺）を置き換えてください
-  vec3 h = normalize(l + v);                          // Blinnの中間ベクトル
-　float diff = max(dot(n, l), 0.0);                   // 拡散反射成分
-　vec4 idiff = diff * kdiff * ldiff;
-　
-　float spec = pow(max(dot(n, h), 0.0), kshi);        // 鏡面反射成分（Blinn）
-　vec4 ispec = spec * kspec * lspec;
-
-　vec4 iamb = kamb * lamb;                            // 環境光成分
-　
-　vc = iamb + idiff + ispec;
+  vc = cv;
 
   gl_Position = mc * pv;
 }
